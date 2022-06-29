@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<style>
+        label{width:300px;display:inline-block;margin:10px;}
+        #form
+        {text_align:center;border-radius:9px;
+        width:500px;padding:19px;
+        }
+        #submit
+        {width:100%;}
+    </style>
+
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit">
+</form>
+
+{% endblock %}

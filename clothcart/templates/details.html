@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block body %}
+
+
+
+<div class="containser>">
+    <div class="row">
+        <div class="col-md-6">
+            <img src="{{cloth.image.url}}">
+        </div>
+        <div class="col-md-6">
+            <h1>{{cloth.head}}</h1><br>
+            <br>
+            <br>
+            <h4>{{cloth.year}}</h4><br>
+            <br>
+            <h3>{{cloth.description}}</h3><br>
+            <br>
+            <a class="btn btn-warning" href="{% url 'appclothcart:update' cloth.id%}">update</a>
+            <a class="btn btn-danger" href="{% url 'appclothcart:delete' cloth.id%}">delete</a>
+
+        </div>
+     </div>
+</div>
+
+
+{% endblock %}

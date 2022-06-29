@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block body %}
+
+
+<style>
+        label{width:300px;display:inline-block;margin:10px;}
+        #form
+        {text_align:center;border-radius:9px;
+        width:500px;padding:19px;
+        }
+        #submit
+        {width:100%;}
+    </style>
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <h4>Add Cloth</h4>
+    <fieldset>
+    <label>Cloth Type</label>
+  <input type="text" name="head" placeholder="Type Of Cloth"><br>
+      <label>Enter Description</label>
+  <input type="text" name="description" placeholder="description"><br>
+      <label>Year</label>
+  <input type="text" name="year"><br>
+    <label>Upload Image</label>
+    <input type="file" name="image" ><br>
+    <input type="submit">
+        </fieldset>
+</form>
+
+{% endblock %}
+
